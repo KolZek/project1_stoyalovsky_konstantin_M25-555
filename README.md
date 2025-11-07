@@ -4,7 +4,7 @@
 
 ### Демонстрация игры
 
-[![ASCII Cast](https://asciinema.org/a/IQ0JWDQ5Ql51s07Kt0w8kIdTN)](https://asciinema.org/a/IQ0JWDQ5Ql51s07Kt0w8kIdTN)
+[![asciicast](https://asciinema.org/a/dKoVSLvLKDXbzjhyLeVIhKNOV.svg)](https://asciinema.org/a/dKoVSLvLKDXbzjhyLeVIhKNOV)
 
 ### Технологии
 Python 3.12.10
