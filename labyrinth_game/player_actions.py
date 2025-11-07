@@ -3,6 +3,7 @@ from labyrinth_game.utils import describe_current_room, random_event
 
 
 def show_inventory(game_state):
+    """Отображение инвентаря игрока."""
     player_inventory = game_state["player_inventory"]
 
     if not player_inventory:
@@ -13,6 +14,7 @@ def show_inventory(game_state):
 
 
 def move_player(game_state, direction):
+    """Передвижение по комнатам игрока."""
     player_inventory = game_state["player_inventory"]
     current_room = game_state["current_room"]
     room_data = ROOMS[current_room]
@@ -38,6 +40,7 @@ def move_player(game_state, direction):
 
 
 def take_item(game_state, item_name):
+    """Добавление предмета в инвентарь."""
     current_room = game_state["current_room"]
     room_data = ROOMS[current_room]
 
@@ -57,6 +60,7 @@ def take_item(game_state, item_name):
 
 
 def use_item(game_state, item_name):
+    """Использование предмета из инвентаря."""
     player_inventory = game_state["player_inventory"]
 
     if item_name in player_inventory:

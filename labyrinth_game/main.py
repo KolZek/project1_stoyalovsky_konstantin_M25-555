@@ -22,6 +22,7 @@ game_state = {
 
 
 def process_command(game_state, command):
+    """Обработка команд."""
     user_command = command.split()
 
     match user_command[0]:
@@ -50,6 +51,7 @@ def process_command(game_state, command):
 
 
 def main():
+    """Главная функция."""
     # print("Первая попытка запустить проект!")
     print("Добро пожаловать в Лабиринт сокровищ!\n")
 

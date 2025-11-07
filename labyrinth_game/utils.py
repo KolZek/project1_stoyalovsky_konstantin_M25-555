@@ -11,6 +11,7 @@ from labyrinth_game.constants import (
 
 
 def get_input(prompt="> "):
+    """Обработка ввода пользователя."""
     try:
         user_input = input(prompt).strip().lower()
         return user_input
@@ -20,6 +21,7 @@ def get_input(prompt="> "):
 
 
 def describe_current_room(game_state):
+    """Описание текущей комнаты."""
     current_room = game_state["current_room"]
     room_data = ROOMS[current_room]
 
@@ -44,6 +46,7 @@ def describe_current_room(game_state):
 
 
 def solve_puzzle(game_state):
+    """Решение загадок."""
     current_room = game_state["current_room"]
     room_data = ROOMS[current_room]
 
@@ -72,6 +75,7 @@ def solve_puzzle(game_state):
 
 
 def attempt_open_treasure(game_state):
+    """Попытка открыть сокровщие."""
     player_inventory = game_state["player_inventory"]
     current_room = game_state["current_room"]
 
@@ -100,6 +104,7 @@ def attempt_open_treasure(game_state):
 
 
 def pseudo_random(seed, modulo):
+    """Псевдослучайный генератор."""
     seed_sin = math.sin(seed * 12.9898)
     seed_mltp = seed_sin * 43758.5453
     fact_part = seed_mltp - math.floor(seed_mltp)
@@ -108,6 +113,7 @@ def pseudo_random(seed, modulo):
 
 
 def trigger_trap(game_state):
+    """Обработка срабатывания ловушки."""
     print("\nЛовушка активирована! Пол стал дрожать...\n")
 
     player_inventory = game_state["player_inventory"]
@@ -128,6 +134,7 @@ def trigger_trap(game_state):
 
 
 def random_event(game_state):
+    """Вероятность случайного события при передвижении игрока."""
     player_inventory = game_state["player_inventory"]
     current_room = game_state["current_room"]
 
@@ -156,6 +163,7 @@ def random_event(game_state):
 
 
 def show_help():
+    """Вывод подсказки."""
     print("\nДоступные команды:")
     for command, mean in COMMANDS.items():
         print(f"{command:<16} {mean}")
